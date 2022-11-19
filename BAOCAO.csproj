@@ -1,0 +1,251 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{AD808997-32AD-4DE0-BAAC-883F61DC756E}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>BAOCAO</RootNamespace>
+    <AssemblyName>BAOCAO</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Aspose.Cells, Version=8.7.2.0, Culture=neutral, PublicKeyToken=716fcc553a201e56, processorArchitecture=MSIL">
+      <HintPath>..\packages\Aspose.Cells.8.7.2\lib\net40\Aspose.Cells.dll</HintPath>
+    </Reference>
+    <Reference Include="ClosedXML, Version=0.95.4.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\ClosedXML.0.95.4\lib\net46\ClosedXML.dll</HintPath>
+    </Reference>
+    <Reference Include="DocumentFormat.OpenXml, Version=2.7.2.0, Culture=neutral, PublicKeyToken=8fb06cb64d019a17, processorArchitecture=MSIL">
+      <HintPath>..\packages\DocumentFormat.OpenXml.2.7.2\lib\net46\DocumentFormat.OpenXml.dll</HintPath>
+    </Reference>
+    <Reference Include="ExcelEngine, Version=1.1.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\ExcelEngine.1.1.1\lib\net40\ExcelEngine.dll</HintPath>
+    </Reference>
+    <Reference Include="ExcelNumberFormat, Version=1.0.10.0, Culture=neutral, PublicKeyToken=23c6f5d73be07eca, processorArchitecture=MSIL">
+      <HintPath>..\packages\ExcelNumberFormat.1.0.10\lib\net20\ExcelNumberFormat.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Office.Interop.Excel.15.0.4795.1000\lib\net20\Microsoft.Office.Interop.Excel.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.IO.FileSystem.Primitives, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.IO.FileSystem.Primitives.4.0.1\lib\net46\System.IO.FileSystem.Primitives.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.IO.Packaging, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.IO.Packaging.4.0.0\lib\net46\System.IO.Packaging.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ConnectToDB.cs" />
+    <Compile Include="GUI\CANHO.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\CANHO.Designer.cs">
+      <DependentUpon>CANHO.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\CHITIET.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\CHITIET.Designer.cs">
+      <DependentUpon>CHITIET.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\DICHVU.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\DICHVU.Designer.cs">
+      <DependentUpon>DICHVU.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\HOADONDIEN.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\HOADONDIEN.Designer.cs">
+      <DependentUpon>HOADONDIEN.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\HOADONNUOC.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\HOADONNUOC.Designer.cs">
+      <DependentUpon>HOADONNUOC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\HOPDONG.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\HOPDONG.Designer.cs">
+      <DependentUpon>HOPDONG.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\MAIN.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\MAIN.Designer.cs">
+      <DependentUpon>MAIN.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\LOGIN.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\LOGIN.Designer.cs">
+      <DependentUpon>LOGIN.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\NHANVIEN.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\NHANVIEN.Designer.cs">
+      <DependentUpon>NHANVIEN.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\HGD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\HGD.Designer.cs">
+      <DependentUpon>HGD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\TAIKHOAN.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\TAIKHOAN.Designer.cs">
+      <DependentUpon>TAIKHOAN.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\THANHVIEN.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\THANHVIEN.Designer.cs">
+      <DependentUpon>THANHVIEN.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\TKDIEN.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\TKDIEN.Designer.cs">
+      <DependentUpon>TKDIEN.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\TKNUOC.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\TKNUOC.Designer.cs">
+      <DependentUpon>TKNUOC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\TRANGCHU.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\TRANGCHU.Designer.cs">
+      <DependentUpon>TRANGCHU.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\XEMHOADON.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\XEMHOADON.Designer.cs">
+      <DependentUpon>XEMHOADON.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="GUI\CANHO.resx">
+      <DependentUpon>CANHO.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\CHITIET.resx">
+      <DependentUpon>CHITIET.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\DICHVU.resx">
+      <DependentUpon>DICHVU.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\HOADONDIEN.resx">
+      <DependentUpon>HOADONDIEN.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\HOADONNUOC.resx">
+      <DependentUpon>HOADONNUOC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\HOPDONG.resx">
+      <DependentUpon>HOPDONG.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\LOGIN.resx">
+      <DependentUpon>LOGIN.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\MAIN.resx">
+      <DependentUpon>MAIN.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\NHANVIEN.resx">
+      <DependentUpon>NHANVIEN.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\HGD.resx">
+      <DependentUpon>HGD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\TAIKHOAN.resx">
+      <DependentUpon>TAIKHOAN.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\THANHVIEN.resx">
+      <DependentUpon>THANHVIEN.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\TKDIEN.resx">
+      <DependentUpon>TKDIEN.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\TKNUOC.resx">
+      <DependentUpon>TKNUOC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\TRANGCHU.resx">
+      <DependentUpon>TRANGCHU.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\XEMHOADON.resx">
+      <DependentUpon>XEMHOADON.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="IMAGES\house %281%29.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
